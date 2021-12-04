@@ -13,7 +13,9 @@ bot.
 """
 
 import logging
+import os
 
+from dotenv import load_dotenv
 from telegram import Update
 from telegram.ext import CallbackContext, CommandHandler, Updater
 
@@ -25,6 +27,8 @@ logging.basicConfig(
 )
 
 logger = logging.getLogger(__name__)
+
+load_dotenv()
 
 
 def price(update: Update, context: CallbackContext) -> None:
@@ -52,7 +56,7 @@ def price(update: Update, context: CallbackContext) -> None:
 def main() -> None:
     """Start the bot."""
     # Create the Updater and pass it your bot's token.
-    updater = Updater("1819030984:AAF2cSZsZYgukyJ8NTp0ZRuMIq3LHXzsc54")
+    updater = Updater(os.environ["token"])
 
     # Get the dispatcher to register handlers
     dispatcher = updater.dispatcher

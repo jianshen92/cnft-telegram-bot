@@ -15,4 +15,4 @@ class CNFTlisting(BaseModel):
         return f"https://cnft.io/token/{self.listing_id}"
 
     def md_v2_serialize(self) -> str:
-        return f"{self.asset_id} *{self.price_ada} ADA* [link]({self.url})"
+        return f"[{self.asset_id}]({self.url}) *{self.price_ada} ADA*"
