@@ -65,6 +65,7 @@ def main() -> None:
     dispatcher.add_handler(
         CommandHandler(command="price", callback=price, pass_args=True)
     )
+    dispatcher.add_handler(CommandHandler(command="p", callback=price, pass_args=True))
 
     # Start the Bot
     updater.start_polling()
