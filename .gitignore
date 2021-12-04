@@ -1,0 +1,17 @@
+.ipynb_checkpoints
+*.pyc
+venv
+.env
+__pycache__
+
+# pytest
+.pytest_cache
+
+# coverage files
+htmlcov
+junit
+.coverage
+coverage.xml
+
+# output csvs
+*.csv

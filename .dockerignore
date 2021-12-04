@@ -1,0 +1,8 @@
+*.pyc
+Dockerfile
+.dockerignore
+.git
+__pycache__
+venv
+nb
+*.csv
