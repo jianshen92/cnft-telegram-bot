@@ -18,7 +18,18 @@ def get_price_data(project: str, query: str) -> List[CNFTlisting]:
     headers = {
         "authority": "api.cnft.io",
         "accept": "application/json, text/plain, */*",
+        "user-agent": (
+            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+            "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36"
+        ),
         "content-type": "application/json",
+        "sec-gpc": "1",
+        "origin": "https://cnft.io",
+        "sec-fetch-site": "same-site",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-dest": "empty",
+        "referer": "https://cnft.io/",
+        "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
     }
 
     http_data = (
