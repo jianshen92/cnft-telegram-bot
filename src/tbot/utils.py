@@ -44,6 +44,7 @@ def get_price_data(project: str, query: str) -> List[CNFTlisting]:
     )
 
     if response.status_code != 200:
+        print(response.text)
         raise Exception("Http response not 200")
     try:
         response_data = response.json()
